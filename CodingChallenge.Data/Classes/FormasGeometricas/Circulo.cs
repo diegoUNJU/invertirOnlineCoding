@@ -3,25 +3,21 @@ using System;
 
 namespace CodingChallenge.Data.Classes.FormasGeometricas
 {
-    public class Circulo : IGeometrica
+    public class Circulo : Geometrica
     {
-        public TipoFiguras TipoFiguras { get; }
-        public decimal Lado { get; }
 
-        public Circulo(decimal lado)
+        public Circulo(decimal lado) : base(TipoFiguras.Circulo, lado)
         {
-            Lado = lado;
-            TipoFiguras = TipoFiguras.Circulo;
         }
 
-        public decimal CalcularArea(decimal lado)
+        public override decimal CalcularArea()
         {
-            return (decimal)Math.PI * (lado / 2) * (lado / 2); //lado es diametro.
+            return (decimal)Math.PI * (Lado / 2) * (Lado / 2); //lado es diametro.
         }
 
-        public decimal CalcularPerimetro(decimal lado)
+        public override decimal CalcularPerimetro()
         {
-            return (decimal)Math.PI * lado; // lado es diametro.
+            return (decimal)Math.PI * Lado; // lado es diametro.
         }
     }
 }

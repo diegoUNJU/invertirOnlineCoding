@@ -2,24 +2,20 @@
 
 namespace CodingChallenge.Data.Classes.FormasGeometricas
 {
-    public class Cuadrado : IGeometrica
+    public class Cuadrado : Geometrica
     {
-        public TipoFiguras TipoFiguras { get; }
-        public decimal Lado { get; }
 
-        public Cuadrado(decimal lado)
+        public Cuadrado(decimal lado) : base(TipoFiguras.Cuadrado, lado)
         {
-            Lado = lado;
-            TipoFiguras = TipoFiguras.Cuadrado;
         }
-        public decimal CalcularArea(decimal lado)
+        public override decimal CalcularArea()
         {
-            return lado * lado;
+            return Lado * Lado;
         }
 
-        public decimal CalcularPerimetro(decimal lado)
+        public override decimal CalcularPerimetro()
         {
-            return 2 * (lado + lado);
+            return 4 * Lado;
         }
     }
 }

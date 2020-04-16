@@ -3,25 +3,20 @@ using System;
 
 namespace CodingChallenge.Data.Classes.FormasGeometricas
 {
-    public class TrianguloEquilatero : IGeometrica
+    public class TrianguloEquilatero : Geometrica
     {
-        public TipoFiguras TipoFiguras { get; }
-        public decimal Lado { get; }
-
-        public TrianguloEquilatero(decimal lado)
+        public TrianguloEquilatero(decimal lado) : base(TipoFiguras.TrianguloEquilatero, lado)
         {
-            Lado = lado;
-            TipoFiguras = TipoFiguras.TrianguloEquilatero;
         }
 
-        public decimal CalcularArea(decimal lado)
+        public override decimal CalcularArea()
         {
-            return ((decimal)Math.Sqrt(3) / 4) * lado * lado;
+            return ((decimal)Math.Sqrt(3) / 4) * Lado * Lado;
         }
 
-        public decimal CalcularPerimetro(decimal lado)
+        public override decimal CalcularPerimetro()
         {
-            return lado * 3;
+            return Lado * 3;
         }
     }
 }
