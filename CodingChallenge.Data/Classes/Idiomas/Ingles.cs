@@ -39,7 +39,7 @@ namespace CodingChallenge.Data.Classes.Idiomas
             sb.Append("TOTAL:<br/>");
             sb.Append(numeroCuadrados + numeroCirculos + numeroTriangulos + numeroTrapecios + " " + "shapes" + " ");
             sb.Append("Perimeter " + (perimetroCuadrados + perimetroTriangulos + perimetroCirculos + perimetroTrapecios).ToString("#.##") + " ");
-            sb.Append("Area " + (areaCuadrados + areaCirculos + areaTriangulos + perimetroTrapecios).ToString("#.##"));
+            sb.Append("Area " + (areaCuadrados + areaCirculos + areaTriangulos + areaTrapecios).ToString("#.##"));
             return sb;
         }
     }
