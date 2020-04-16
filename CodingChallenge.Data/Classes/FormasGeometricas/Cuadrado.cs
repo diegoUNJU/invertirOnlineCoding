@@ -4,8 +4,8 @@ namespace CodingChallenge.Data.Classes.FormasGeometricas
 {
     public class Cuadrado : IGeometrica
     {
-        public TipoFiguras TipoFiguras { get; set; }
-        public decimal Lado { get; set; }
+        public TipoFiguras TipoFiguras { get; }
+        public decimal Lado { get; }
 
         public Cuadrado(decimal lado)
         {

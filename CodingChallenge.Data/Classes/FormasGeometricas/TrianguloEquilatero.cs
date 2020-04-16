@@ -1,12 +1,12 @@
-﻿using System;
-using CodingChallenge.Data.Classes.Comun;
+﻿using CodingChallenge.Data.Classes.Comun;
+using System;
 
 namespace CodingChallenge.Data.Classes.FormasGeometricas
 {
-   public class TrianguloEquilatero: IGeometrica
+    public class TrianguloEquilatero : IGeometrica
     {
-        public TipoFiguras TipoFiguras { get; set; }
-        public decimal Lado { get; set; }
+        public TipoFiguras TipoFiguras { get; }
+        public decimal Lado { get; }
 
         public TrianguloEquilatero(decimal lado)
         {

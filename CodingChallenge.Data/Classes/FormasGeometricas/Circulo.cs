@@ -3,10 +3,10 @@ using System;
 
 namespace CodingChallenge.Data.Classes.FormasGeometricas
 {
-    public class Circulo: IGeometrica
+    public class Circulo : IGeometrica
     {
-        public TipoFiguras TipoFiguras { get; set; }
-        public decimal Lado { get; set; }
+        public TipoFiguras TipoFiguras { get; }
+        public decimal Lado { get; }
 
         public Circulo(decimal lado)
         {
